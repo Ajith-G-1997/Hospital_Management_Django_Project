@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+{% block title %}Department Page{% endblock %}
+
+{% block content %}
+  <h1 style="text-align:center;">Department Page</h1>
+  <hr>
+  <div>
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th>Department Name</th>
+          <th>Department Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in dept %}
+          <tr>
+            <td>{{ i.dep_name }}</td>
+            <td>{{ i.dep_description }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

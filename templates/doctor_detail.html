@@ -1,0 +1,20 @@
+{% extends 'home.html' %}
+
+{% block title %}Doctor Details{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>Doctor Details</h1>
+    <div class="card mb-3">
+      <img src="{{ doctor.doctor_image.url }}" class="card-img-top "alt="{{ doctor.doctor_name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ doctor.doctor_name }}</h5>
+        <p class="card-text"><strong>Specialty:</strong> {{ doctor.doctor_special }}</p>
+        <p class="card-text"><strong>Department Name  :</strong> {{ doctor.department_name }}</p>
+        {% comment %} <p class="card-text"><strong>Phone:</strong> {{ doctor.phone }}</p>
+        <p class="card-text"><strong>Address:</strong> {{ doctor.address }}</p> {% endcomment %}
+        <!-- Add more fields as per your Doctor model -->
+      </div>
+    </div>
+  </div>
+{% endblock %}

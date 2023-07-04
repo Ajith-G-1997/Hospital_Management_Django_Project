@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+
+{% block title %}Doctors Page{% endblock %}
+
+{% block content %}
+  <h1>Doctors Page</h1>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for doctor in doctors %}
+      <div class="col">
+        <div class="card">
+          <img src="{{ doctor.doctor_image.url }}" class="card-img-top" alt="{{ doctor.doctor_name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ doctor.doctor_name }}</h5>
+            <p class="card-text">{{ doctor.doctor_special }}</p>
+            <a href="{% url 'doctor_detail' doctor.id %}" class="btn btn-primary">View Profile</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'home.html' %}
+
+{% block content %}
+  <h1>Booking List</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Patient ID</th>
+        <th>Patient Name</th>
+        <th>Doctor Name</th>
+        <th>Booking Date </th>
+        <th>Department Name</th>
+        <th>Patient Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for booking in booking %}
+        <tr>
+          <td>{{ booking.patient_id }}</td>
+          <td>{{ booking.patient_name }}</td>
+          <td>{{ booking.doctor_name }}</td>
+          <td>{{ booking.date }}</td>
+          <td>{{ booking.department_name }}</td>
+          <td>{{ booking.patient_number }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

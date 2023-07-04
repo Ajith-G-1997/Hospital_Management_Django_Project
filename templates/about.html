@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+{% load static %}
+
+
+{% block content %}
+  <section class="about-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="about-info">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, justo ac luctus mattis, urna mi mattis magna, vitae hendrerit ipsum ex et ex. Suspendisse nec ante nec sem vestibulum elementum.</p>
+            <p>Sed vitae facilisis neque, a condimentum purus. Fusce eu lacus a est placerat volutpat. Phasellus vulputate arcu sed urna commodo, eu tempus ipsum rhoncus. Vivamus sit amet tortor at mi pulvinar dignissim.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="{% static 'f.jpg' %}" class="img-fluid" alt="About Image">
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
